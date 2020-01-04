@@ -5,27 +5,40 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.PopupWindow;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class HomeActivity extends AppCompatActivity implements HomeFragment.OnFragmentInteractionListener,
+        HouseFragment.OnFragmentInteractionListener,
         DobbyFragment.OnFragmentInteractionListener,
         MyPageFragment.OnFragmentInteractionListener {
     private FragmentManager fragmentManager = getSupportFragmentManager();
     private FragmentTransaction transaction = fragmentManager.beginTransaction();
     private HomeFragment homeFragment = new HomeFragment();
+    private HouseFragment houseFragment = new HouseFragment();
     private DobbyFragment dobbyFragment = new DobbyFragment();
     private MyPageFragment myPageFragment = new MyPageFragment();
+
+    private PopupWindow window;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         Log.d("여기는 한번만", "실행");
@@ -46,8 +59,7 @@ public class HomeActivity extends AppCompatActivity implements HomeFragment.OnFr
                     }
                     break;
                 case R.id.navigation_dashboard:
-                    transaction = fragmentManager.beginTransaction();
-                    if(!dobbyFragment.isAdded()) transaction.replace(R.id.frameLayout, dobbyFragment).commitNowAllowingStateLoss();
+                    ShowPopupWindow();
                     break;
                 case R.id.navigation_notifications:
                     transaction = fragmentManager.beginTransaction();
@@ -59,6 +71,51 @@ public class HomeActivity extends AppCompatActivity implements HomeFragment.OnFr
             return true;
         }
     };
+
+
+    private void ShowPopupWindow(){
+        try {
+            ImageView house, dobby;
+
+            LayoutInflater inflater = (LayoutInflater) HomeActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View layout = inflater.inflate(R.layout.popupwindow, null);
+            window = new PopupWindow(layout, 1300, 800, true);
+
+            window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            window.setOutsideTouchable(true);
+            window.showAtLocation(layout, Gravity.CENTER, 40, 60);
+            //  window.showAtLocation(layout, 17, 100, 100);
+
+            house = (ImageView) layout.findViewById(R.id.house);
+            dobby = (ImageView) layout.findViewById(R.id.dob);
+
+            transaction = fragmentManager.beginTransaction();
+
+            house.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    window.dismiss();
+                    if(!houseFragment.isAdded()) transaction.replace(R.id.frameLayout, houseFragment).commitNowAllowingStateLoss();
+
+                }
+            });
+
+            dobby.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    window.dismiss();
+                    if(!dobbyFragment.isAdded()) transaction.replace(R.id.frameLayout, dobbyFragment).commitNowAllowingStateLoss();
+                }
+
+            });
+
+
+        }catch (Exception e){
+
+        }
+    }
+
+
 
     @Override
     public void onFragmentInteraction(Uri uri) {
