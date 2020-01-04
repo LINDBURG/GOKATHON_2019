@@ -19,6 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".starDobbyActivity"></activity>
+        <activity android:name=".HouseActivity" />
+        <activity android:name=".AuthActivity" />
 
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
@@ -43,6 +46,9 @@
         <activity android:name=".LoadingActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MyHistory" />
+        <activity android:name=".DobbyInfoActivity" />
+        <activity android:name=".ReviewActivity" />
+        <activity android:name=".NotificationActivity" />
         <activity android:name=".DobbyInfoActivity"/>
         <activity android:name=".ReviewActivity"/>
         <activity android:name=".NotificationActivity"/>
