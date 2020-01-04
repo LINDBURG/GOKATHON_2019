@@ -1,6 +1,7 @@
 package com.example.gokathon;
 
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -10,7 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 
 /**
@@ -33,6 +37,11 @@ public class MyPageFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    private ListView listView;
+    ArrayList<MyHistory> history_list;
+    HistoryAdapter myadapter;
+    MyHistory my1, my2, my3;
 
     public MyPageFragment() {
         // Required empty public constructor
@@ -71,7 +80,7 @@ public class MyPageFragment extends Fragment {
                              Bundle savedInstanceState) {
 
 
-        //여기서부터 새로 작성
+        //여기서부터 새로 작성 by 문재호
 
         View v = inflater.inflate(R.layout.fragment_my_page, container, false);
 
@@ -88,6 +97,25 @@ public class MyPageFragment extends Fragment {
         for(int i=0; i<100; i++)
             text += i + "\n";
         textView.setText(text);
+
+
+        listView = (ListView) v.findViewById(R.id.listView);
+        my1 = new MyHistory("손님1", "정말조와용", "별점 5개", BitmapFactory.decodeResource(getResources(), R.drawable.gollum1));
+        my2 = new MyHistory("손님2", "약간조와용", "별점 4개", BitmapFactory.decodeResource(getResources(), R.drawable.gollum2));
+        my3 = new MyHistory("손님3", "별로조와용", "별점 3개", BitmapFactory.decodeResource(getResources(), R.drawable.gollum3));
+        history_list = new ArrayList<MyHistory>();
+        history_list.add(my1);
+        history_list.add(my2);
+        history_list.add(my3);
+        history_list.add(my1);
+        history_list.add(my2);
+        history_list.add(my3);
+        history_list.add(my1);
+        history_list.add(my2);
+        history_list.add(my3);
+
+        myadapter = new HistoryAdapter(getActivity(), R.layout.my_history,history_list);
+        listView.setAdapter(myadapter);
 
         // Inflate the layout for this fragment
         return v;
