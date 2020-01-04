@@ -1,4 +1,7 @@
 package com.example.gokathon;
 
-public class ReviewActivity {
+
+
+public class ReviewActivity{
+
 }

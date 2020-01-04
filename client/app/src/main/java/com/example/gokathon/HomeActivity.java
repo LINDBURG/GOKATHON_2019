@@ -120,7 +120,15 @@ public class HomeActivity extends AppCompatActivity implements HomeFragment.OnFr
         }
     }
 
+    private static long back_pressed;
 
+    @Override
+    public void onBackPressed()
+    {
+        if (back_pressed + 2000 > System.currentTimeMillis()) super.onBackPressed();
+        else Toast.makeText(getBaseContext(), "한번 더 누르시면 앱이 종료됩니다.", Toast.LENGTH_SHORT).show();
+        back_pressed = System.currentTimeMillis();
+    }
 
     @Override
     public void onFragmentInteraction(Uri uri) {
