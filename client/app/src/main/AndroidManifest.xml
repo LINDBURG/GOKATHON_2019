@@ -36,6 +36,7 @@
         <activity android:name=".LoadingActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MyHistory" />
+        <activity android:name=".DobbyInfoActivity" />
     </application>
 
 </manifest>
