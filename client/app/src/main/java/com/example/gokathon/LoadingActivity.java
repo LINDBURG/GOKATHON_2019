@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoadingActivity extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 5000;
+    private static int SPLASH_TIME_OUT = 5000; //이건 왜?
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class LoadingActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run(){
-                Intent mainIntent = new Intent(LoadingActivity.this, MainActivity.class);
+                Intent mainIntent = new Intent(LoadingActivity.this, HomeActivity.class);
                 startActivity(mainIntent);
                 finish();
 
