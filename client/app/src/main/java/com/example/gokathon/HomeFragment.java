@@ -263,6 +263,7 @@ public class HomeFragment extends Fragment {
             View customTruckView = getLayoutInflater().inflate(R.layout.grid_element,null);
             TextView txtTruckNo = (TextView)customTruckView.findViewById(R.id.txtTruckNo);
             txtTruckNo.setText(truckNo.get(position));
+            txtTruckNo.setTextSize(9);
             txtTruckNo.setCompoundDrawablesWithIntrinsicBounds(0, truckImage.get(position),0,0);
             return customTruckView;
         }
