@@ -118,6 +118,14 @@ public class MyPageFragment extends Fragment {
             }
         });
 
+        LinearLayout toState = (LinearLayout) v.findViewById(R.id.status);
+        toState.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homeIntent = new Intent(getActivity(), CurrentRoomStateActivity.class);
+                startActivity(homeIntent);
+            }
+        });
 
         LinearLayout toHistory = (LinearLayout) v.findViewById(R.id.history);
         toHistory.setOnClickListener(new View.OnClickListener() {
