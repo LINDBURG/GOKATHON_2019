@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -45,10 +46,6 @@ public class MyPageFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    private ListView listView;
-    ArrayList<History> history_list;
-    HistoryAdapter myadapter;
-    History my1, my2, my3;
 
     public MyPageFragment() {
         // Required empty public constructor
@@ -70,29 +67,6 @@ public class MyPageFragment extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
-    }
-
-    //스크롤뷰 안에 리스트뷰 문제 해결 위해 넣음
-    public static void setListViewHeightBasedOnChildren(ListView listView) {
-        ListAdapter listAdapter = listView.getAdapter();
-        if (listAdapter == null) {
-            // pre-condition
-            return;
-        }
-
-        int totalHeight = 0;
-        int desiredWidth = View.MeasureSpec.makeMeasureSpec(listView.getWidth(), View.MeasureSpec.AT_MOST);
-
-        for (int i = 0; i < listAdapter.getCount(); i++) {
-            View listItem = listAdapter.getView(i, null, listView);
-            listItem.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
-            totalHeight += listItem.getMeasuredHeight();
-        }
-
-        ViewGroup.LayoutParams params = listView.getLayoutParams();
-        params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
-        listView.setLayoutParams(params);
-        listView.requestLayout();
     }
 
 
@@ -118,12 +92,12 @@ public class MyPageFragment extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_my_page, container, false);
 
-        ImageView imageView = (ImageView) v.findViewById(R.id.image1);
-        TextView textView = (TextView) v.findViewById(R.id.text1);
+        ImageView imageView = (ImageView) v.findViewById(R.id.profile);
+        TextView textView = (TextView) v.findViewById(R.id.name);
 
 
         // drawable에 있는 이미지를 지정합니다.
-        imageView.setImageResource(R.drawable.dobby);
+        imageView.setImageResource(R.drawable.dobby_profile);
 
 
         // 100 줄의 텍스트를 생성합니다.
@@ -131,18 +105,11 @@ public class MyPageFragment extends Fragment {
         textView.setText(text);
 
 
+
         //버튼 처리
-        Button toAccount = (Button) v.findViewById(R.id.button4);
-        toAccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent homeIntent = new Intent(getActivity(), MyHistory.class);
-                startActivity(homeIntent);
-            }
-        });
 
 
-        Button toHouse = (Button) v.findViewById(R.id.button5);
+        LinearLayout toHouse = (LinearLayout) v.findViewById(R.id.house);
         toHouse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -152,7 +119,7 @@ public class MyPageFragment extends Fragment {
         });
 
 
-        Button toHistory = (Button) v.findViewById(R.id.button6);
+        LinearLayout toHistory = (LinearLayout) v.findViewById(R.id.history);
         toHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
