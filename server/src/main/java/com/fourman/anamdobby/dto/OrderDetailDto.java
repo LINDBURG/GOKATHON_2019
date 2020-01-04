@@ -3,6 +3,7 @@ package com.fourman.anamdobby.dto;
 import com.fourman.anamdobby.model.OrderDetail;
 
 public class OrderDetailDto {
+    private long orderId;
     private String homeAddress;
     private String requirements;
     private int price;
@@ -12,12 +13,21 @@ public class OrderDetailDto {
     public OrderDetailDto() {
     }
 
-    public OrderDetailDto(String homeAddress, String requirements, int price, String cleaningTarget, String roomPassword) {
+    public OrderDetailDto(long orderId, String homeAddress, String requirements, int price, String cleaningTarget, String roomPassword) {
+        this.orderId = orderId;
         this.homeAddress = homeAddress;
         this.requirements = requirements;
         this.price = price;
         this.cleaningTarget = cleaningTarget;
         this.roomPassword = roomPassword;
+    }
+
+    public long getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(long orderId) {
+        this.orderId = orderId;
     }
 
     public String getHomeAddress() {

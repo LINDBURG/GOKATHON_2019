@@ -47,6 +47,10 @@ public class Order {
         return status.equals(OrderStatus.NOT_STARTED);
     }
 
+    public boolean isNotFinished() {
+        return !status.equals(OrderStatus.DONE);
+    }
+
     public long getId() {
         return id;
     }

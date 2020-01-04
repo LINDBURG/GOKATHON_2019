@@ -5,6 +5,7 @@ import com.fourman.anamdobby.service.DobbyService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -30,5 +31,11 @@ public class DobbyController {
     @GetMapping("/dobbys/{naverId}/reviews")
     ResponseEntity<List<String>> getDobbyReviews(@PathVariable String naverId) {
         return ResponseEntity.ok(dobbyService.findAllReviewById(naverId));
+    }
+
+    @PostMapping("/dobbys/{naverId}/orders/{orderId}")
+    ResponseEntity applyOrder(@PathVariable String naverId, @PathVariable long orderId) {
+        dobbyService.applyOrder(naverId, orderId);
+        return ResponseEntity.ok().build();
     }
 }

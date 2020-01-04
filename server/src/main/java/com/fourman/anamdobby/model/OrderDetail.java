@@ -32,7 +32,7 @@ public class OrderDetail {
     }
 
     public OrderDetailDto toDto() {
-        return new OrderDetailDto(homeAddress, requirements, price, cleaningTarget, roomPassword);
+        return new OrderDetailDto(id, homeAddress, requirements, price, cleaningTarget, roomPassword);
     }
 
     public long getId() {

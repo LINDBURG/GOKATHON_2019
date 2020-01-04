@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -48,5 +49,12 @@ public class DobbyService {
         return ordersByDobby.stream()
                 .map(order -> order.getReview())
                 .collect(Collectors.toList());
+    }
+
+    public void applyOrder(String naverId, long orderId) {
+        User user = userRepository.findUserByNaverId(naverId)
+                .orElseThrow(() -> new RuntimeException(naverId + " id인 User를 찾지 못했습니다."));
+        Order order = orderService.findOrderById(orderId);
+        user.setOrderToClean(order);
     }
 }

@@ -70,6 +70,14 @@ public class User {
         this.profileFileName = profileFileName;
     }
 
+    public Order getOrderToClean() {
+        return orderToClean;
+    }
+
+    public void setOrderToClean(Order orderToClean) {
+        this.orderToClean = orderToClean;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
