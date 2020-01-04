@@ -11,6 +11,8 @@ import android.os.AsyncTask;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
 public class MainActivity extends AppCompatActivity {
     private TextView tv_outPut;
 
@@ -33,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
     public class NetworkTask extends AsyncTask<Void, Void, String> {
 
         private String url;
-        private ContentValues values;
+        private JSONObject values;
 
-        public NetworkTask(String url, ContentValues values) {
+        public NetworkTask(String url, JSONObject values) {
 
             this.url = url;
             this.values = values;

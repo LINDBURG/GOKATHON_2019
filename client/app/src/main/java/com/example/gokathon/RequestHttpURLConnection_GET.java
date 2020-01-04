@@ -1,5 +1,8 @@
 package com.example.gokathon;
 import android.content.ContentValues;
+
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,7 +13,7 @@ import java.net.URL;
 import java.util.Map;
 
 class RequestHttpURLConnection_GET {
-    public String request(String _url, ContentValues _params){
+    public String request(String _url, JSONObject _params){
 
         // HttpURLConnection 참조 변수.
         HttpURLConnection urlConn = null;
