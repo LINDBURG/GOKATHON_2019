@@ -48,9 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
             String result; // 요청 결과를 저장할 변수.
             RequestHttpURLConnection_GET requestHttpURLConnectionGET = new RequestHttpURLConnection_GET();
-            result = requestHttpURLConnectionGET.request(url, values); // 해당 URL로 부터 결과물을 얻어온다.
-            Log.d("====================", "===============");
-            Log.d("value", result);
+            result = requestHttpURLConnectionGET.request(url, ""); // 해당 URL로 부터 결과물을 얻어온다.
+
             return result;
         }
 

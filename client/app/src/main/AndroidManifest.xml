@@ -38,8 +38,9 @@
         <activity android:name=".LoadingActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MyHistory" />
-        <activity android:name=".DobbyInfoActivity"></activity>
-        <activity android:name=".ReviewActivity"></activity>
+        <activity android:name=".DobbyInfoActivity"/>
+        <activity android:name=".ReviewActivity"/>
+        <activity android:name=".NotificationActivity"/>
     </application>
 
 </manifest>

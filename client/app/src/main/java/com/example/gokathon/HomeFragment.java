@@ -89,6 +89,14 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         int images[] = {R.drawable.image1, R.drawable.image2, R.drawable.image3};
         ViewFlipper v_flipper = (ViewFlipper) view.findViewById(R.id.v_flipper);
+        ImageView noti = (ImageView) view.findViewById(R.id.notification_button);
+        noti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent2 = new Intent(getActivity(), NotificationActivity.class);
+                startActivity(myIntent2);
+            }
+        });
         for (int i=0; i<images.length; i++){
             ImageView imageView  =new ImageView(this.getActivity());
             imageView.setBackgroundResource(images[i]);
