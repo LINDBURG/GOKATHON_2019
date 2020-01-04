@@ -12,8 +12,7 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "author_id")
+    @OneToOne(cascade = CascadeType.ALL)
     private User author;
 
     /*
@@ -42,6 +41,10 @@ public class Order {
         this.author = user;
         this.orderDetail = orderDetail;
         this.status = OrderStatus.NOT_STARTED;
+    }
+
+    public boolean isNotStarted() {
+        return status.equals(OrderStatus.NOT_STARTED);
     }
 
     public long getId() {
@@ -90,6 +93,14 @@ public class Order {
 
     public void setReview(String review) {
         this.review = review;
+    }
+
+    public OrderDetail getOrderDetail() {
+        return orderDetail;
+    }
+
+    public void setOrderDetail(OrderDetail orderDetail) {
+        this.orderDetail = orderDetail;
     }
 
     @Override

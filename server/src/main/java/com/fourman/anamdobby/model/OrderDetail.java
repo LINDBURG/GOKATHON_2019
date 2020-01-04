@@ -1,5 +1,7 @@
 package com.fourman.anamdobby.model;
 
+import com.fourman.anamdobby.dto.OrderDetailDto;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,6 +29,10 @@ public class OrderDetail {
         this.price = price;
         this.cleaningTarget = cleaningTarget;
         this.roomPassword = roomPassword;
+    }
+
+    public OrderDetailDto toDto() {
+        return new OrderDetailDto(homeAddress, requirements, price, cleaningTarget, roomPassword);
     }
 
     public long getId() {
