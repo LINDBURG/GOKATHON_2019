@@ -3,12 +3,8 @@
     package="com.example.gokathon">
 
     <!-- naver app을 통한 인증을 위해 필요한 permission -->
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <!-- network 상태를 미리 체크하여 연결 안된 경우 다이얼로그를 보여주려면 아래 permission 추가 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <!-- android test 돌릴 때 화면 lock 풀어야 로그인 touch 가능 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- network 상태를 미리 체크하여 연결 안된 경우 다이얼로그를 보여주려면 아래 permission 추가 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- android test 돌릴 때 화면 lock 풀어야 로그인 touch 가능 -->
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -25,6 +21,7 @@
             android:name="org.apache.http.legacy"
             android:required="false"/>
 
+        <activity android:name=".HomeActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,12 +29,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoadingActivity" />
+        <activity android:name=".MainActivity" />
 
-        <activity android:name=".LoginActivity">
-        </activity>
-        <activity android:name=".LoadingActivity"></activity>
-        <activity android:name=".MainActivity">
-        </activity>
     </application>
 
 </manifest>
