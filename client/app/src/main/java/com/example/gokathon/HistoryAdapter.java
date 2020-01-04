@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -14,10 +13,10 @@ import java.util.ArrayList;
 public class HistoryAdapter extends BaseAdapter {
     private Context mContext = null;
     private int layout = 0;
-    private ArrayList<MyHistory> data = null;
+    private ArrayList<History> data = null;
     private LayoutInflater inflater = null;
 
-    public HistoryAdapter(Context c, int l, ArrayList<MyHistory> d) {
+    public HistoryAdapter(Context c, int l, ArrayList<History> d) {
         this.mContext = c;
         this.layout = l;
         this.data = d;
