@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
 /**
@@ -61,13 +63,34 @@ public class MyPageFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+        //여기서부터 새로 작성
+
+        View v = inflater.inflate(R.layout.fragment_my_page, container, false);
+
+        ImageView imageView = (ImageView) v.findViewById(R.id.image1);
+        TextView textView = (TextView) v.findViewById(R.id.text1);
+
+
+        // drawable에 있는 이미지를 지정합니다.
+        imageView.setImageResource(R.drawable.dobby);
+
+
+        // 100 줄의 텍스트를 생성합니다.
+        String text = "";
+        for(int i=0; i<100; i++)
+            text += i + "\n";
+        textView.setText(text);
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_page, container, false);
+        return v;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
