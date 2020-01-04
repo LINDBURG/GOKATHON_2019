@@ -113,7 +113,7 @@ public class MyPageFragment extends Fragment {
         toHouse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent homeIntent = new Intent(getActivity(), MyHistory.class);
+                Intent homeIntent = new Intent(getActivity(), MyLocation.class);
                 startActivity(homeIntent);
             }
         });

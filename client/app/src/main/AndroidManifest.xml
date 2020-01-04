@@ -19,6 +19,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="9mvwvok1rx" />
+
         <activity android:name=".HouseActivity"></activity>
         <activity android:name=".AuthActivity"></activity>
 
@@ -41,6 +46,7 @@
         <activity android:name=".DobbyInfoActivity"/>
         <activity android:name=".ReviewActivity"/>
         <activity android:name=".NotificationActivity"/>
+        <activity android:name=".MyLocation"/>
     </application>
 
 </manifest>
