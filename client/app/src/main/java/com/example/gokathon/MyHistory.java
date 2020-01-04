@@ -24,9 +24,9 @@ public class MyHistory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myhistory);
         listView = (ListView)findViewById(R.id.listView);
-        my1 = new History("주인님1", "정말조와용", "별점 5개", BitmapFactory.decodeResource(getResources(), R.drawable.gollum1));
-        my2 = new History("주인님2", "약간조와용", "별점 4개", BitmapFactory.decodeResource(getResources(), R.drawable.gollum2));
-        my3 = new History("주인님3", "별로조와용", "별점 3개", BitmapFactory.decodeResource(getResources(), R.drawable.gollum3));
+        my1 = new History("주인님1", "정말조와용", "양말 5개", BitmapFactory.decodeResource(getResources(), R.drawable.gollum1));
+        my2 = new History("주인님2", "약간조와용", "양말 4개", BitmapFactory.decodeResource(getResources(), R.drawable.gollum2));
+        my3 = new History("주인님3", "별로조와용", "양말 3개", BitmapFactory.decodeResource(getResources(), R.drawable.gollum3));
         history_list = new ArrayList<History>();
         history_list.add(my1);
         history_list.add(my2);
