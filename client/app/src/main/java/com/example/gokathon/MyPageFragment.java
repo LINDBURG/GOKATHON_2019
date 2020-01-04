@@ -1,16 +1,22 @@
 package com.example.gokathon;
 
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 
 /**
@@ -34,6 +40,11 @@ public class MyPageFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
+    private ListView listView;
+    ArrayList<MyHistory> history_list;
+    HistoryAdapter myadapter;
+    MyHistory my1, my2, my3;
+
     public MyPageFragment() {
         // Required empty public constructor
     }
@@ -56,6 +67,31 @@ public class MyPageFragment extends Fragment {
         return fragment;
     }
 
+    //스크롤뷰 안에 리스트뷰 문제 해결 위해 넣음
+    public static void setListViewHeightBasedOnChildren(ListView listView) {
+        ListAdapter listAdapter = listView.getAdapter();
+        if (listAdapter == null) {
+            // pre-condition
+            return;
+        }
+
+        int totalHeight = 0;
+        int desiredWidth = View.MeasureSpec.makeMeasureSpec(listView.getWidth(), View.MeasureSpec.AT_MOST);
+
+        for (int i = 0; i < listAdapter.getCount(); i++) {
+            View listItem = listAdapter.getView(i, null, listView);
+            listItem.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
+            totalHeight += listItem.getMeasuredHeight();
+        }
+
+        ViewGroup.LayoutParams params = listView.getLayoutParams();
+        params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
+        listView.setLayoutParams(params);
+        listView.requestLayout();
+    }
+
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,7 +107,7 @@ public class MyPageFragment extends Fragment {
                              Bundle savedInstanceState) {
 
 
-        //여기서부터 새로 작성
+        //여기서부터 새로 작성 by 문재호
 
         View v = inflater.inflate(R.layout.fragment_my_page, container, false);
 
@@ -88,6 +124,27 @@ public class MyPageFragment extends Fragment {
         for(int i=0; i<100; i++)
             text += i + "\n";
         textView.setText(text);
+
+
+        listView = (ListView) v.findViewById(R.id.listView);
+        my1 = new MyHistory("손님1", "정말조와용", "별점 5개", BitmapFactory.decodeResource(getResources(), R.drawable.gollum1));
+        my2 = new MyHistory("손님2", "약간조와용", "별점 4개", BitmapFactory.decodeResource(getResources(), R.drawable.gollum2));
+        my3 = new MyHistory("손님3", "별로조와용", "별점 3개", BitmapFactory.decodeResource(getResources(), R.drawable.gollum3));
+        history_list = new ArrayList<MyHistory>();
+        history_list.add(my1);
+        history_list.add(my2);
+        history_list.add(my3);
+        history_list.add(my1);
+        history_list.add(my2);
+        history_list.add(my3);
+        history_list.add(my1);
+        history_list.add(my2);
+        history_list.add(my3);
+
+        myadapter = new HistoryAdapter(getActivity(), R.layout.my_history,history_list);
+        listView.setAdapter(myadapter);
+        setListViewHeightBasedOnChildren(listView);
+
 
         // Inflate the layout for this fragment
         return v;
