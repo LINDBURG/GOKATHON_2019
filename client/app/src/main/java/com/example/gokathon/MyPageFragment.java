@@ -80,7 +80,7 @@ public class MyPageFragment extends Fragment {
         }
 
 
-        Toast.makeText(getContext(), LoginActivity.userEmail, Toast.LENGTH_LONG).show();
+       /* Toast.makeText(getContext(), LoginActivity.userEmail, Toast.LENGTH_LONG).show();*/
     }
 
     @Override
@@ -136,7 +136,14 @@ public class MyPageFragment extends Fragment {
             }
         });
 
-
+        LinearLayout toStar = (LinearLayout) v.findViewById(R.id.star);
+        toStar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homeIntent = new Intent(getActivity(), starDobbyActivity.class);
+                startActivity(homeIntent);
+            }
+        });
 
         // Inflate the layout for this fragment
         return v;

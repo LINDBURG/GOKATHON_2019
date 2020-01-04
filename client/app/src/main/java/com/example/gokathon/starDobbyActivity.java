@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class starDobbyActivity extends AppCompatActivity {
 
@@ -251,6 +253,17 @@ public class starDobbyActivity extends AppCompatActivity {
             }
         });
 
+
+        Button endButton = findViewById(R.id.evalend);
+        endButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "도비의 평가를 완료하였습니다 :)", Toast.LENGTH_LONG).show();
+                Intent mainIntent = new Intent(starDobbyActivity.this, HomeActivity.class);
+                startActivity(mainIntent);
+                finish();
+            }
+        });
 
     }
 }
