@@ -212,11 +212,34 @@
 
                     <TextView
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/viewmyHouse"
+                        android:paddingLeft="20dp"
+                        android:text="나의 집 위치정보"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/question" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
 
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:text="나의 집 정보"
+                        android:text="나의 집 현재상태"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -239,7 +262,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:text="나의 도비 평가"
+                        android:text="내가 고용했던 도비 평가"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
