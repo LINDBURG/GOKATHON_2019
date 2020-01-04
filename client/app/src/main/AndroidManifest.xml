@@ -19,8 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".HouseActivity"></activity>
-        <activity android:name=".AuthActivity"></activity>
+        <activity android:name=".starDobbyActivity"></activity>
+        <activity android:name=".HouseActivity" />
+        <activity android:name=".AuthActivity" />
 
         <uses-library
             android:name="org.apache.http.legacy"
@@ -38,9 +39,9 @@
         <activity android:name=".LoadingActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MyHistory" />
-        <activity android:name=".DobbyInfoActivity"/>
-        <activity android:name=".ReviewActivity"/>
-        <activity android:name=".NotificationActivity"/>
+        <activity android:name=".DobbyInfoActivity" />
+        <activity android:name=".ReviewActivity" />
+        <activity android:name=".NotificationActivity" />
     </application>
 
 </manifest>

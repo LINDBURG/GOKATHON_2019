@@ -83,7 +83,7 @@ public class AuthActivity extends AppCompatActivity {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent homeIntent = new Intent(AuthActivity.this, HomeActivity.class);
+                Intent homeIntent = new Intent(AuthActivity.this, starDobbyActivity.class);
                 startActivity(homeIntent);
             }
         });
