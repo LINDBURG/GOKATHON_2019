@@ -6,7 +6,6 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.leanback.widget.HorizontalGridView;
 
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -105,7 +104,6 @@ public class HomeFragment extends Fragment {
         truckListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-              //  String selectedItem = adapterView.getItemAtPosition(i).toString();
                 Intent newIntent= new Intent(getActivity(), DobbyInfoActivity.class);
                 startActivity(newIntent);
             }
