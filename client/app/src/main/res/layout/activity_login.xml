@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@drawable/dobbylogin"
     tools:context="com.example.gokathon.LoginActivity">
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -26,6 +27,7 @@
         <com.nhn.android.naverlogin.ui.view.OAuthLoginButton
             android:id="@+id/buttonNaverLogin"
             android:layout_width="wrap_content"
+            android:layout_marginTop="190dp"
             android:layout_height="50dp" />
 
         <Button

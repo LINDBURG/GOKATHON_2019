@@ -1,6 +1,8 @@
 package com.example.gokathon;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,14 +10,16 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 
@@ -41,9 +45,9 @@ public class MyPageFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     private ListView listView;
-    ArrayList<MyHistory> history_list;
+    ArrayList<History> history_list;
     HistoryAdapter myadapter;
-    MyHistory my1, my2, my3;
+    History my1, my2, my3;
 
     public MyPageFragment() {
         // Required empty public constructor
@@ -120,30 +124,40 @@ public class MyPageFragment extends Fragment {
 
 
         // 100 줄의 텍스트를 생성합니다.
-        String text = "";
-        for(int i=0; i<100; i++)
-            text += i + "\n";
+        String text = "나쁜 도비";
         textView.setText(text);
 
 
-        listView = (ListView) v.findViewById(R.id.listView);
-        my1 = new MyHistory("손님1", "정말조와용", "별점 5개", BitmapFactory.decodeResource(getResources(), R.drawable.gollum1));
-        my2 = new MyHistory("손님2", "약간조와용", "별점 4개", BitmapFactory.decodeResource(getResources(), R.drawable.gollum2));
-        my3 = new MyHistory("손님3", "별로조와용", "별점 3개", BitmapFactory.decodeResource(getResources(), R.drawable.gollum3));
-        history_list = new ArrayList<MyHistory>();
-        history_list.add(my1);
-        history_list.add(my2);
-        history_list.add(my3);
-        history_list.add(my1);
-        history_list.add(my2);
-        history_list.add(my3);
-        history_list.add(my1);
-        history_list.add(my2);
-        history_list.add(my3);
+        //버튼 처리
+        Button toAccount = (Button) v.findViewById(R.id.button4);
+        toAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homeIntent = new Intent(getActivity(), MyHistory.class);
+                startActivity(homeIntent);
+            }
+        });
 
-        myadapter = new HistoryAdapter(getActivity(), R.layout.my_history,history_list);
-        listView.setAdapter(myadapter);
-        setListViewHeightBasedOnChildren(listView);
+
+        Button toHouse = (Button) v.findViewById(R.id.button5);
+        toHouse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homeIntent = new Intent(getActivity(), MyHistory.class);
+                startActivity(homeIntent);
+            }
+        });
+
+
+        Button toHistory = (Button) v.findViewById(R.id.button6);
+        toHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homeIntent = new Intent(getActivity(), MyHistory.class);
+                startActivity(homeIntent);
+            }
+        });
+
 
 
         // Inflate the layout for this fragment

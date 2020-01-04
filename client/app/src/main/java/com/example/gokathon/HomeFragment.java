@@ -1,6 +1,7 @@
 package com.example.gokathon;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -11,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -99,6 +101,14 @@ public class HomeFragment extends Fragment {
         //initialize view
         GridView truckListView = (GridView) view.findViewById(R.id.truckList);
         GridView truckListView_home = (GridView) view.findViewById(R.id.truckList2);
+        truckListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+              //  String selectedItem = adapterView.getItemAtPosition(i).toString();
+                Intent newIntent= new Intent(getActivity(), DobbyInfoActivity.class);
+                startActivity(newIntent);
+            }
+        });
         //initialize truck data
         truckNo = new ArrayList<>();
         truckImage = new ArrayList<>();
@@ -143,6 +153,7 @@ public class HomeFragment extends Fragment {
         truckListView.setHorizontalSpacing(2);
         truckListView.setStretchMode(GridView.STRETCH_SPACING);
         truckListView.setNumColumns(truckNo.size());
+
         // render truck mapping details
         truckListView.setAdapter(new CustomAdapter());
 
@@ -161,17 +172,6 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
-   /* public void flipperImages(int image){
-        ImageView imageView  =new ImageView(this.getActivity());
-        imageView.setBackgroundResource(image);
-        v_flipper.addView(imageView);
-        v_flipper.setFlipInterval(3000); //3sec
-        v_flipper.setAutoStart(true);
-
-        v_flipper.setInAnimation(this.getActivity(), android.R.anim.slide_in_left);
-        v_flipper.setInAnimation(this.getActivity(), android.R.anim.slide_out_right);
-
-    }*/
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
@@ -210,33 +210,6 @@ public class HomeFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
-    private void customizeTruckView() {
-        truckListView.setNumColumns(truckNo.size());
-
-        //manipulate the width of each item in grid view / truck list
-        DisplayMetrics dm = new DisplayMetrics();
-        getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
-
-        // width = your devices width
-        int width = dm.widthPixels;
-
-        Log.d("MainActivity","hori grid width "+width);
-
-        // number of items you have to display in screen
-        int numOfItemPerScreen = 3;
-        Log.d("MainActivity","hori grid width per screen "+numOfItemPerScreen);
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                (width * (truckNo.size() / numOfItemPerScreen)), LinearLayout.LayoutParams.MATCH_PARENT);
-
-        truckListView.setLayoutParams(params);
-        // width of each item in grid I am displaying 3 items per screen
-        truckListView.setColumnWidth(width / numOfItemPerScreen);
-        truckListView.setHorizontalSpacing(2);
-        truckListView.setStretchMode(GridView.STRETCH_SPACING);
-        truckListView.setNumColumns(truckNo.size());
-        // render truck mapping details
-        truckListView.setAdapter(new CustomAdapter());
-    }
 
     /**
      * Class used to customize TruckView
@@ -262,6 +235,7 @@ public class HomeFragment extends Fragment {
             View customTruckView = getLayoutInflater().inflate(R.layout.grid_element,null);
             TextView txtTruckNo = (TextView)customTruckView.findViewById(R.id.txtTruckNo);
             txtTruckNo.setText(truckNo.get(position));
+
             txtTruckNo.setTextSize(9);
             txtTruckNo.setCompoundDrawablesWithIntrinsicBounds(0, truckImage.get(position),0,0);
             return customTruckView;

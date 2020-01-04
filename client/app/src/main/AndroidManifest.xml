@@ -18,8 +18,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".HouseActivity"></activity>
-        <activity android:name=".AuthActivity" />
-        <activity android:name=".AuthAcrivity" />
+        <activity android:name=".AuthActivity"></activity>
 
         <uses-library
             android:name="org.apache.http.legacy"
@@ -36,6 +35,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".LoadingActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".MyHistory" />
     </application>
 
 </manifest>
