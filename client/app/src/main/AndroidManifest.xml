@@ -35,6 +35,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".LoadingActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".MyHistory" />
     </application>
 
 </manifest>
