@@ -17,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".AuthActivity"></activity>
+        <activity android:name=".HouseActivity"></activity>
+        <activity android:name=".AuthActivity" />
         <activity android:name=".AuthAcrivity" />
 
         <uses-library

@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -95,7 +96,11 @@ public class HomeActivity extends AppCompatActivity implements HomeFragment.OnFr
                 @Override
                 public void onClick(View v) {
                     window.dismiss();
-                    if(!houseFragment.isAdded()) transaction.replace(R.id.frameLayout, houseFragment).commitNowAllowingStateLoss();
+                    //if(!houseFragment.isAdded()) transaction.replace(R.id.frameLayout, houseFragment).commitNowAllowingStateLoss();
+
+                    Intent mainIntent = new Intent(HomeActivity.this, HouseActivity.class);
+                    startActivity(mainIntent);
+                    finish();
 
                 }
             });

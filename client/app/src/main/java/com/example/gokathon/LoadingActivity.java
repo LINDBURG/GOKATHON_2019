@@ -22,7 +22,6 @@ public class LoadingActivity extends AppCompatActivity {
                 startActivity(mainIntent);
                 finish();
 
-
                 overridePendingTransition(R.anim.fadein, R.anim.fadeout);
             }
         },SPLASH_TIME_OUT);
