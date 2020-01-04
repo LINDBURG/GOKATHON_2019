@@ -78,5 +78,14 @@ public class AuthActivity extends AppCompatActivity {
                 }
             }
         });
+
+        Button skipButton = (Button) findViewById(R.id.button3);
+        skipButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homeIntent = new Intent(AuthActivity.this, HomeActivity.class);
+                startActivity(homeIntent);
+            }
+        });
     }
 }

@@ -64,6 +64,22 @@
         tools:layout_editor_absoluteX="56dp"
         tools:layout_editor_absoluteY="542dp" />
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="393dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="테스트용 skip 버튼 :)"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="542dp" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="286dp"
