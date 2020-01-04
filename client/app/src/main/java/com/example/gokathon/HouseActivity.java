@@ -30,7 +30,7 @@ public class HouseActivity extends AppCompatActivity {
         registeration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "http://54.180.123.81:8080/orders/1";
+                String url = "http://54.180.123.81:8080/orders/";
 
                 address = (TextView) findViewById(R.id.location);
                 req = (TextView) findViewById(R.id.etc);
@@ -45,6 +45,7 @@ public class HouseActivity extends AppCompatActivity {
                 values.put("cleaningTarget", target.getText().toString());
                 values.put("roomPassword", password.getText().toString());
 
+                url += LoginActivity.userEmail;
                 NetworkTask networkTask = new NetworkTask(url, values);
                // networkTask.execute();
 
