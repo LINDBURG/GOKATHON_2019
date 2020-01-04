@@ -1,6 +1,7 @@
 package com.example.gokathon;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,13 +13,13 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class HistoryAdapter extends BaseAdapter {
+public class HistoryAdapter2 extends BaseAdapter {
     private Context mContext = null;
     private int layout = 0;
     private ArrayList<History> data = null;
     private LayoutInflater inflater = null;
 
-    public HistoryAdapter(Context c, int l, ArrayList<History> d) {
+    public HistoryAdapter2(Context c, int l, ArrayList<History> d) {
         this.mContext = c;
         this.layout = l;
         this.data = d;
@@ -55,12 +56,16 @@ public class HistoryAdapter extends BaseAdapter {
         TextView Hu_gender = (TextView) convertView.findViewById(R.id.Human_gender);
         TextView Hu_age = (TextView) convertView.findViewById(R.id.Human_age);
 
-
         Hu_image.setImageBitmap(data.get(position).image);
         Hu_name.setText(data.get(position).name);
         Hu_gender.setText(data.get(position).gender);
         Hu_age.setText(data.get(position).age);
 
+        Animation anim = new AlphaAnimation(0.0f, 1.0f);
+        anim.setDuration(100);
+        anim.setRepeatMode(Animation.REVERSE);
+        anim.setRepeatCount(Animation.INFINITE);
+        Hu_age.startAnimation(anim);
         return convertView;
     }
 }
