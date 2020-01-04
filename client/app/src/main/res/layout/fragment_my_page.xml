@@ -28,7 +28,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="350dp"
-                    android:background="@drawable/gradientbackground"
+                    android:background="@drawable/gradientbackground2"
                     android:orientation="vertical">
 
                     <ImageView
@@ -45,7 +45,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
-                        android:text="하스도비98"
+                        android:text="안암슈렉"
                         android:textColor="#fff"
                         android:textSize="21sp"
                         android:textStyle="bold" />
@@ -54,7 +54,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="1dp"
-                        android:text="&quot;주인님, 당신의 집은 제가 맡겠습니다!!&quot;"
+                        android:text="&quot;꺠끗하고 싶지만 귀찮은데 어떡해&quot;"
                         android:textColor="#fff"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -82,7 +82,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="양말 평"
+                                android:text="내 양말 점수"
                                 android:textSize="20sp" />
 
                             <TextView
@@ -113,7 +113,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingTop="10dp"
-                                android:text="125"
+                                android:text="2"
                                 android:textColor="@color/Black"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
@@ -130,14 +130,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="리뷰 "
+                                android:text="나의 리뷰 "
                                 android:textSize="20sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingTop="10dp"
-                                android:text="119"
+                                android:text="9"
                                 android:textColor="@color/Black"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
@@ -231,6 +231,7 @@
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
+
                         android:src="@drawable/question" />
 
                     <TextView
