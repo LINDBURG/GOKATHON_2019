@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class starDobbyActivity extends AppCompatActivity {
@@ -251,6 +252,16 @@ public class starDobbyActivity extends AppCompatActivity {
             }
         });
 
+
+        Button endButton = findViewById(R.id.evalend);
+        endButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(starDobbyActivity.this, MyPageFragment.class);
+                startActivity(mainIntent);
+                finish();
+            }
+        });
 
     }
 }

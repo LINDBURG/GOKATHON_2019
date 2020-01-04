@@ -240,7 +240,7 @@
         tools:layout_editor_absoluteY="261dp" />
 
     <Button
-        android:id="@+id/end"
+        android:id="@+id/evalend"
         android:layout_width="393dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
