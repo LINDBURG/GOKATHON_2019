@@ -31,7 +31,6 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Large Text"
                 android:id="@+id/Human_name" />
-
             <TextView
                 android:textColor="#111111"
                 android:layout_width="wrap_content"
