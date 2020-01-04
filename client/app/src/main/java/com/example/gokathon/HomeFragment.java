@@ -38,6 +38,8 @@ public class HomeFragment extends Fragment {
     private GridView truckListView;
     private ArrayList<String> truckNo;
     private ArrayList<Integer> truckImage;
+    private ArrayList<String> truckNo_home;
+    private ArrayList<Integer> truckImage_home;
 
     ViewFlipper v_flipper;
     // TODO: Rename and change types of parameters
@@ -97,31 +99,30 @@ public class HomeFragment extends Fragment {
         }
         //initialize view
         GridView truckListView = (GridView) view.findViewById(R.id.truckList);
+        GridView truckListView_home = (GridView) view.findViewById(R.id.truckList2);
         //initialize truck data
         truckNo = new ArrayList<>();
         truckImage = new ArrayList<>();
+        truckNo_home = new ArrayList<>();
+        truckImage_home = new ArrayList<>();
         // add values
         // add values
-        truckNo.add("MH12MH12");
-        truckNo.add("MH11MH11");
-        truckNo.add("MH10MH10");
-        truckNo.add("MH09MH09");
-        truckNo.add("MH08MH08");
-       /* truckNo.add("크리쳐");
-        truckNo.add("해리코털95");
         truckNo.add("집요정맞음");
         truckNo.add("바나나");
-        truckNo.add("옥시싹싹");*/
-
-
+        truckNo.add("옥시싹싹");
         truckImage.add(R.drawable.hanju);
         truckImage.add(R.drawable.jaemin);
         truckImage.add(R.drawable.gollum);
-        truckImage.add(R.drawable.minion);
-        truckImage.add(R.drawable.malfoy);
-
+        //truckImage.add(R.drawable.minion);
+        //truckImage.add(R.drawable.malfoy);
+        truckNo_home.add("집좀 어떻게");
+        truckNo_home.add("설거지");
+        truckNo_home.add("안암동 돼지우리");
+        truckImage_home.add(R.drawable.dirtyhouse1);
+        truckImage_home.add(R.drawable.dirtyhouse3);
+        truckImage_home.add(R.drawable.dirtyhouse4);
         truckListView.setNumColumns(truckNo.size());
-
+        truckListView_home.setNumColumns(truckNo_home.size());
         //manipulate the width of each item in grid view / truck list
         DisplayMetrics dm = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -145,6 +146,18 @@ public class HomeFragment extends Fragment {
         truckListView.setNumColumns(truckNo.size());
         // render truck mapping details
         truckListView.setAdapter(new CustomAdapter());
+
+        LinearLayout.LayoutParams params_home = new LinearLayout.LayoutParams(
+                (width * (truckNo_home.size() / numOfItemPerScreen)), LinearLayout.LayoutParams.MATCH_PARENT);
+
+        truckListView.setLayoutParams(params_home);
+        // width of each item in grid I am displaying 3 items per screen
+        truckListView_home.setColumnWidth(width / numOfItemPerScreen);
+        truckListView_home.setHorizontalSpacing(2);
+        truckListView_home.setStretchMode(GridView.STRETCH_SPACING);
+        truckListView_home.setNumColumns(truckNo_home.size());
+        // render truck mapping details
+        truckListView_home.setAdapter(new CustomAdapter_home());
 
         return view;
     }
@@ -251,6 +264,36 @@ public class HomeFragment extends Fragment {
             TextView txtTruckNo = (TextView)customTruckView.findViewById(R.id.txtTruckNo);
             txtTruckNo.setText(truckNo.get(position));
             txtTruckNo.setCompoundDrawablesWithIntrinsicBounds(0, truckImage.get(position),0,0);
+            return customTruckView;
+        }
+    }
+
+
+    /**
+     * Class used to customize TruckView
+     */
+    private class CustomAdapter_home extends BaseAdapter {
+        @Override
+        public int getCount() {
+            return truckNo_home.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View customTruckView = getLayoutInflater().inflate(R.layout.grid_element,null);
+            TextView txtTruckNo = (TextView)customTruckView.findViewById(R.id.txtTruckNo);
+            txtTruckNo.setText(truckNo_home.get(position));
+            txtTruckNo.setCompoundDrawablesWithIntrinsicBounds(0, truckImage_home.get(position),0,0);
             return customTruckView;
         }
     }
