@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
@@ -104,6 +105,8 @@ public class MyPageFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
+
+        Toast.makeText(getContext(), LoginActivity.userEmail, Toast.LENGTH_LONG).show();
     }
 
     @Override

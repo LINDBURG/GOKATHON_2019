@@ -2,9 +2,9 @@
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/submitPopup"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@color/colorPrimary"
+    android:background="#4D000000"
     android:columnCount="2"
     android:numColumns="2"
     android:padding="4dp"
@@ -23,15 +23,6 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp">
 
-        <ImageView
-            android:id="@+id/house"
-            android:layout_width="141dp"
-            android:layout_height="156dp"
-            android:layout_gravity="center"
-            android:maxWidth="70dp"
-            android:maxHeight="70dp"
-            android:src="@drawable/houes" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,15 +40,6 @@
         android:orientation="vertical"
         android:paddingTop="10dp">
 
-        <ImageView
-            android:id="@+id/dob"
-            android:layout_width="159dp"
-            android:layout_height="182dp"
-            android:layout_gravity="center"
-            android:maxWidth="70dp"
-            android:maxHeight="70dp"
-            android:src="@drawable/dob" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,5 +47,27 @@
             android:text="Voice"
             android:textColor="@color/browser_actions_bg_grey" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/dob"
+        android:layout_width="159dp"
+        android:layout_height="182dp"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_gravity="center"
+        android:maxWidth="70dp"
+        android:maxHeight="70dp"
+        android:src="@drawable/dobbyimage" />
+
+    <ImageView
+        android:id="@+id/house"
+        android:layout_width="159dp"
+        android:layout_height="182dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_gravity="center"
+        android:maxWidth="70dp"
+        android:maxHeight="70dp"
+        android:src="@drawable/houseimage" />
 
 </GridLayout>

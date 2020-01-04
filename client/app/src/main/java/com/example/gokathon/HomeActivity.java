@@ -80,7 +80,7 @@ public class HomeActivity extends AppCompatActivity implements HomeFragment.OnFr
 
             LayoutInflater inflater = (LayoutInflater) HomeActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View layout = inflater.inflate(R.layout.popupwindow, null);
-            window = new PopupWindow(layout, 1300, 800, true);
+            window = new PopupWindow(layout, 1600, 2050, true); //기기가 바뀌면 이부분 꺠질수도 있음(*수정요망)
 
             window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             window.setOutsideTouchable(true);

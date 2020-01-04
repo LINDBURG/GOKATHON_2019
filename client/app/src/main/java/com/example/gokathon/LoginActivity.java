@@ -27,6 +27,7 @@ import org.json.JSONObject;
  *
  * @author naver
  */
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     private OAuthLoginButton naverLogInButton;
     private static OAuthLogin naverLoginInstance;
@@ -35,6 +36,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     static final String CLIENT_ID = "ZtOT3yBa46P3VWSbq9Dz";
     static final String CLIENT_SECRET = "ImBTVU9NU6";
     static final String CLIENT_NAME = "네이버 아이디로 로그인 테스트";
+    public static String userEmail = null;
 
     TextView tv_mail;
     static Context context;
@@ -81,7 +83,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnGetApi.setOnClickListener(this);
         btnLogout = (Button)findViewById(R.id.btnlogout);
         btnLogout.setOnClickListener(this);
-
     }
 
     @Override
@@ -115,6 +116,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 JSONObject response = jsonObject.getJSONObject("response");
                 String email = response.getString("email");
                 Log.d(email, email);
+
+                int index = email.indexOf("@");
+                userEmail = email.substring(0, index);
+
                 tv_mail.setText(email);//메일 란 채우기
             }
             catch (Exception e){
@@ -124,5 +129,3 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
 }
-
-
