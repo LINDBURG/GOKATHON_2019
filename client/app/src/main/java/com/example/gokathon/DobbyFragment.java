@@ -1,6 +1,7 @@
 package com.example.gokathon;
 
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -9,6 +10,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 
 /**
@@ -30,6 +34,11 @@ public class DobbyFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    private ListView listView;
+    ArrayList<House> house_list;
+    HouseAdapter myadapter;
+    House house1, house2, house3, house4;
 
     public DobbyFragment() {
         // Required empty public constructor
@@ -65,8 +74,30 @@ public class DobbyFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View v = inflater.inflate(R.layout.fragment_dobby, container, false);
+
+        listView = (ListView) v.findViewById(R.id.listView);
+        house1 = new House("청길아파트", "설거지", "\\5000", BitmapFactory.decodeResource(getResources(), R.drawable.dirtyhouse1));
+        house2 = new House("안암빌라", "침실정리", "\\10000", BitmapFactory.decodeResource(getResources(), R.drawable.dirtyhouse2));
+        house3 = new House("JS빌딩", "책상정리", "\\5000", BitmapFactory.decodeResource(getResources(), R.drawable.dirtyhouse3));
+        house4 = new House("우신향병원", "화장실청소", "\\15000", BitmapFactory.decodeResource(getResources(), R.drawable.dirtyhouse4));
+        house_list = new ArrayList<House>();
+        house_list.add(house1);
+        house_list.add(house2);
+        house_list.add(house3);
+        house_list.add(house4);
+        house_list.add(house1);
+        house_list.add(house2);
+        house_list.add(house3);
+        house_list.add(house4);
+
+        myadapter = new HouseAdapter(getActivity(), R.layout.house, house_list);
+        listView.setAdapter(myadapter);
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dobby, container, false);
+        return v;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
