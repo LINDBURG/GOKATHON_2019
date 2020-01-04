@@ -47,8 +47,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         init_View();
     }
 
-
-
     //초기화
     private void init(){
         context = this;
@@ -65,7 +63,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 if (success) {//로그인 성공
                     new RequestApiTask().execute();
                     Toast.makeText(context,"로그인 되었습니다",Toast.LENGTH_SHORT).show();
-                    Intent mainIntent = new Intent(LoginActivity.this, LoadingActivity.class);
+                    Intent mainIntent = new Intent(LoginActivity.this, AuthActivity.class);
                     Log.d("string", "YOU ARE IN!!!");
                     startActivity(mainIntent);
                 } else {//로그인 실패
