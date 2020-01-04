@@ -115,6 +115,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/reviewText"
                         android:text="리뷰 "
                         android:textSize="20sp" />
 
@@ -122,6 +123,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingTop="10dp"
+                        android:id="@+id/reviewNum"
                         android:text="119"
                         android:textColor="@color/Black"
                         android:textSize="20sp"
@@ -217,7 +219,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-
+                android:id="@+id/viewReviews"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
@@ -230,6 +232,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="35dp"
+        android:id="@+id/followbutton"
         android:background="@drawable/gradientbackground"
         android:text="집요정 팔로우"
         android:textColor="#fff" />
