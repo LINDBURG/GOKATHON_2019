@@ -212,9 +212,9 @@
 
                     <TextView
                         android:layout_width="wrap_content"
-
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
+                        android:id="@+id/viewmyHouse"
                         android:paddingLeft="20dp"
                         android:text="나의 집 위치정보"
                         android:textStyle="bold" />

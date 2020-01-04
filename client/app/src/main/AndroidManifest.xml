@@ -46,6 +46,7 @@
         <activity android:name=".DobbyInfoActivity"/>
         <activity android:name=".ReviewActivity"/>
         <activity android:name=".NotificationActivity"/>
+        <activity android:name=".CurrentRoomStateActivity"/>
         <activity android:name=".MyLocation"/>
     </application>
 

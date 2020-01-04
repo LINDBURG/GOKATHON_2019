@@ -1,5 +1,6 @@
 package com.example.gokathon;
 
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -90,18 +91,19 @@ public class HomeFragment extends Fragment {
         int images[] = {R.drawable.image1, R.drawable.image2, R.drawable.image3};
         ViewFlipper v_flipper = (ViewFlipper) view.findViewById(R.id.v_flipper);
         ImageView noti = (ImageView) view.findViewById(R.id.notification_button);
+
         noti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent myIntent2 = new Intent(getActivity(), NotificationActivity.class);
-                startActivity(myIntent2);
+                startActivity(myIntent2, ActivityOptions.makeSceneTransitionAnimation(getActivity()).toBundle());
             }
         });
         for (int i=0; i<images.length; i++){
             ImageView imageView  =new ImageView(this.getActivity());
             imageView.setBackgroundResource(images[i]);
             v_flipper.addView(imageView);
-            v_flipper.setFlipInterval(3500); //3sec
+            v_flipper.setFlipInterval(3000); //3sec
             v_flipper.setAutoStart(true);
             v_flipper.setInAnimation(this.getActivity(),android.R.anim.fade_in);
 
