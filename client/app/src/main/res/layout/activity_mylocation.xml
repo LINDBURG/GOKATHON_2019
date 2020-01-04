@@ -10,5 +10,5 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         app:navermap_latitude="37.583000"
         app:navermap_longitude="127.029097"
-        app:navermap_zoom="14"/>
+        app:navermap_zoom="15"/>
 </LinearLayout>
