@@ -35,6 +35,8 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".LoadingActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".DobbyInfoActivity"></activity>
+        <activity android:name=".ReviewActivity"></activity>
     </application>
 
 </manifest>

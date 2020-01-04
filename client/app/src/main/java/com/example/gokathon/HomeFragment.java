@@ -105,7 +105,6 @@ public class HomeFragment extends Fragment {
         truckListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-              //  String selectedItem = adapterView.getItemAtPosition(i).toString();
                 Intent newIntent= new Intent(getActivity(), DobbyInfoActivity.class);
                 startActivity(newIntent);
             }
