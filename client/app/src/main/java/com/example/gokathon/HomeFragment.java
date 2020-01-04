@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.leanback.widget.HorizontalGridView;
 
 import android.util.DisplayMetrics;
 import android.util.Log;
