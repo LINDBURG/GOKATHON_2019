@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import java.util.ArrayList;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 /**
@@ -109,13 +110,41 @@ public class HomeFragment extends Fragment {
 
         }
         //initialize view
-        GridView truckListView = (GridView) view.findViewById(R.id.truckList);
+        final GridView truckListView = (GridView) view.findViewById(R.id.truckList);
         GridView truckListView_home = (GridView) view.findViewById(R.id.truckList2);
         truckListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent newIntent= new Intent(getActivity(), DobbyInfoActivity.class);
-                startActivity(newIntent);
+                int random = ThreadLocalRandom.current().nextInt(1, 5);
+                if (random==1){
+                    Intent newIntent= new Intent(getActivity(), DobbyInfoActivity.class);
+                    startActivity(newIntent);
+                }else if (random==2){
+                    Intent newIntent= new Intent(getActivity(), DobbyInfoActivity2.class);
+                    startActivity(newIntent);
+                }else{
+                    Intent newIntent= new Intent(getActivity(), DobbyInfoActivity3.class);
+                    startActivity(newIntent);
+                }
+
+            }
+        });
+
+        truckListView_home.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                int random = ThreadLocalRandom.current().nextInt(1, 5);
+                if (random==1){
+                    Intent newIntent= new Intent(getActivity(), RoomInfoActivity.class);
+                    startActivity(newIntent);
+                }else if (random==2){
+                    Intent newIntent= new Intent(getActivity(), RoomInfoActivity2.class);
+                    startActivity(newIntent);
+                }else{
+                    Intent newIntent= new Intent(getActivity(), RoomInfoActivity3.class);
+                    startActivity(newIntent);
+                }
+
             }
         });
         //initialize truck data

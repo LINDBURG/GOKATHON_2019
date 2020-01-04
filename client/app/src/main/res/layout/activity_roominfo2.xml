@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".DobbyInfoActivity">
+    tools:context=".DobbyInfoActivity3">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="350dp"
-            android:background="@drawable/gradientbackground"
+            android:background="@drawable/dirtyhouse2"
             android:orientation="vertical">
 
             <ImageView
@@ -23,14 +23,14 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="45dp"
-                android:src="@drawable/dobbythehouseelf" />
+                android:src="@drawable/nickiminaj" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:text="하스도비98"
+                android:text="힙한언니"
                 android:textColor="#fff"
                 android:textSize="21sp"
                 android:textStyle="bold" />
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="1dp"
-                android:text="&quot;주인님, 당신의 집은 제가 맡겠습니다!!&quot;"
+                android:text="&quot;쁠렉싱 이스 라이프. 라이프 이즈 쁠렉싱&quot;"
                 android:textColor="#fff"
                 android:textSize="15sp"
                 android:textStyle="bold" />
@@ -68,16 +68,16 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="양말 평"
+                        android:text="도비 모집 여부"
                         android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingTop="10dp"
-                        android:text="4.9/5.0"
+                        android:text="진행 중"
                         android:textColor="@color/Black"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -92,16 +92,16 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="팔로워"
+                        android:text="주 업무"
                         android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingTop="10dp"
-                        android:text="125"
+                        android:text="옷장 정리"
                         android:textColor="@color/Black"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -117,7 +117,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/reviewText"
-                        android:text="리뷰 "
+                        android:text="사례금 "
                         android:textSize="20sp" />
 
                     <TextView
@@ -125,9 +125,9 @@
                         android:layout_height="wrap_content"
                         android:paddingTop="10dp"
                         android:id="@+id/reviewNum"
-                        android:text="119"
+                        android:text="합계 20,000원"
                         android:textColor="@color/Black"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -158,7 +158,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="dobby@korea.ac.kr"
+                android:text="fuCardiB@korea.ac.kr"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -176,11 +176,10 @@
 
             <TextView
                 android:layout_width="wrap_content"
-
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="010 9292 9292"
+                android:text="010 7777 7777"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -194,7 +193,7 @@
             <ImageView
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:src="@drawable/favorites" />
+                android:src="@drawable/dobbyicon" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -202,7 +201,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="평가하기"
+                android:text="도비 출동하기"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -224,18 +223,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="전체 리뷰 조회"
+                android:text="상세 요구사항 조회"
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="35dp"
-        android:id="@+id/followbutton"
-        android:background="@drawable/gradientbackground"
-        android:text="집요정 팔로우"
-        android:textColor="#fff" />
+
 
 </LinearLayout>

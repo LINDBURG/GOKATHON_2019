@@ -9,14 +9,12 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.w3c.dom.Text;
-
-public class DobbyInfoActivity extends AppCompatActivity {
+public class RoomInfoActivity3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dobbyinfo);
+        setContentView(R.layout.activity_roominfo3);
         TextView Review = (TextView)findViewById(R.id.viewReviews);
         TextView ReviewNum = (TextView)findViewById(R.id.reviewNum);
         TextView ReviewText = (TextView)findViewById(R.id.reviewText);
@@ -25,38 +23,30 @@ public class DobbyInfoActivity extends AppCompatActivity {
         Review.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent newIntent = new Intent(DobbyInfoActivity.this, ReviewActivity.class);
+                Intent newIntent = new Intent(RoomInfoActivity3.this, CostActivity3.class);
                 startActivity(newIntent);
             }
         });
         ReviewNum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent newIntent = new Intent(DobbyInfoActivity.this, ReviewActivity.class);
+                Intent newIntent = new Intent(RoomInfoActivity3.this, CostActivity3.class);
                 startActivity(newIntent);
             }
         });
         ReviewText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent newIntent = new Intent(DobbyInfoActivity.this, ReviewActivity.class);
+                Intent newIntent = new Intent(RoomInfoActivity3.this, CostActivity3.class);
                 startActivity(newIntent);
-            }
-        });
-        Follow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent newIntent = new Intent(DobbyInfoActivity.this, HomeActivity.class);
-                startActivity(newIntent);
-                Toast.makeText(getBaseContext(), "'안암도비98' 님을 팔로우 하셨습니다.", Toast.LENGTH_SHORT).show();
             }
         });
         rateDobby.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent newIntent = new Intent(DobbyInfoActivity.this, starDobbyActivity.class);
+                Intent newIntent = new Intent(RoomInfoActivity3.this, HomeActivity.class);
                 startActivity(newIntent);
-                Toast.makeText(getBaseContext(), "과연 양말을 몇개나?!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(), "도비 출동 신청을 하셨습니다.", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -39,6 +39,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginEnd="120dp"
+                        android:id="@+id/profilepic"
                         android:layout_marginBottom="53dp"
                         android:orientation="horizontal"
                         android:weightSum="3">
@@ -91,6 +92,8 @@
                             android:layout_marginTop="0dp"
                             android:layout_marginEnd="0dp"
                             app:srcCompat="@drawable/socks5" />
+
+
                     </RelativeLayout>
 
                     <TextView
@@ -100,23 +103,24 @@
                         android:layout_alignParentEnd="true"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
-                        android:layout_marginEnd="132dp"
+                        android:layout_marginEnd="152dp"
                         android:text="하스도비98"
                         android:textColor="#fff"
                         android:textSize="21sp"
                         android:textStyle="bold" />
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/profilepic"
                         android:layout_alignParentEnd="true"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="-25dp"
                         android:layout_marginEnd="74dp"
-                        android:text="&quot;주인님, 당신의 집은 제가 맡겠습니다!!&quot;"
+                        android:text="&quot;도비에게 양말을 주세요! 많이많이 주세요! &quot;"
                         android:textColor="#fff"
                         android:textSize="15sp"
                         android:textStyle="bold" />
+
 
                 </RelativeLayout>
 
@@ -146,7 +150,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginStart="82dp"
+                        android:layout_marginStart="85dp"
                         android:layout_marginBottom="0dp"
                         app:srcCompat="@drawable/red" />
 
@@ -156,7 +160,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginStart="82dp"
+                        android:layout_marginStart="85dp"
                         android:layout_marginBottom="0dp"
                         app:srcCompat="@drawable/white" />
 
@@ -166,7 +170,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginEnd="159dp"
+                        android:layout_marginEnd="168dp"
                         android:layout_marginBottom="0dp"
                         app:srcCompat="@drawable/white" />
 
@@ -176,7 +180,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginEnd="156dp"
+                        android:layout_marginEnd="165dp"
                         android:layout_marginBottom="0dp"
                         app:srcCompat="@drawable/red" />
 
@@ -186,7 +190,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginEnd="76dp"
+                        android:layout_marginEnd="80dp"
                         android:layout_marginBottom="0dp"
                         app:srcCompat="@drawable/white" />
 
@@ -196,7 +200,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginEnd="73dp"
+                        android:layout_marginEnd="77dp"
                         android:layout_marginBottom="0dp"
                         app:srcCompat="@drawable/red" />
 
@@ -251,7 +255,5 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="55dp"
         android:gravity="center"
-        android:text="평가완료"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="542dp" />
+        android:text="평가완료" />
 </RelativeLayout>

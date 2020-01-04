@@ -23,14 +23,14 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="45dp"
-                android:src="@drawable/dobbythehouseelf" />
+                android:src="@drawable/taylorswift2" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:text="하스도비98"
+                android:text="소주는 한라산"
                 android:textColor="#fff"
                 android:textSize="21sp"
                 android:textStyle="bold" />
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="1dp"
-                android:text="&quot;주인님, 당신의 집은 제가 맡겠습니다!!&quot;"
+                android:text="&quot;집들이 후 대리청소는 제 취미입니다&quot;"
                 android:textColor="#fff"
                 android:textSize="15sp"
                 android:textStyle="bold" />
@@ -75,7 +75,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingTop="10dp"
-                        android:text="4.9/5.0"
+                        android:text="4.2/5.0"
                         android:textColor="@color/Black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -99,7 +99,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingTop="10dp"
-                        android:text="125"
+                        android:text="39"
                         android:textColor="@color/Black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -125,7 +125,7 @@
                         android:layout_height="wrap_content"
                         android:paddingTop="10dp"
                         android:id="@+id/reviewNum"
-                        android:text="119"
+                        android:text="12"
                         android:textColor="@color/Black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -158,7 +158,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="dobby@korea.ac.kr"
+                android:text="chuckyooisgod@korea.ac.kr"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -180,7 +180,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="010 9292 9292"
+                android:text="010 2838 1828"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -198,7 +198,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:id="@+id/ratethisdobby2"
+                android:id="@+id/ratethisdobby"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
