@@ -33,31 +33,6 @@
                     android:background="@drawable/gradientbackground"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="145dp"
-                        android:text="하스도비98"
-                        android:textColor="#fff"
-                        android:textSize="21sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="1dp"
-                        android:layout_marginEnd="74dp"
-                        android:text="&quot;주인님, 당신의 집은 제가 맡겠습니다!!&quot;"
-                        android:textColor="#fff"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-
                     <RelativeLayout
                         android:layout_width="160dp"
                         android:layout_height="165dp"
@@ -117,6 +92,31 @@
                             android:layout_marginEnd="0dp"
                             app:srcCompat="@drawable/socks5" />
                     </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="132dp"
+                        android:text="하스도비98"
+                        android:textColor="#fff"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="74dp"
+                        android:text="&quot;주인님, 당신의 집은 제가 맡겠습니다!!&quot;"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
                 </RelativeLayout>
 
@@ -225,4 +225,33 @@
 
         </RelativeLayout>
     </RelativeLayout>
+
+    <EditText
+        android:id="@+id/evaluation"
+        android:layout_width="332dp"
+        android:layout_height="130dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="387dp"
+        android:gravity="center"
+        android:hint="추가 평가 입력"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="261dp" />
+
+    <Button
+        android:id="@+id/end"
+        android:layout_width="393dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="55dp"
+        android:gravity="center"
+        android:text="평가완료"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="542dp" />
 </RelativeLayout>
