@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="111dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="150dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/anamdobbylogo"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp" />
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/notification_button"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/notification"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="60dp"
+            android:text="요즘 HOT한 도비"
+            android:textAlignment="textStart"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ViewFlipper
+            android:id="@+id/v_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="90dp"
+            android:background="@color/Black"></ViewFlipper>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="360dp"
+            android:text="이 달의 도비"
+            android:textAlignment="textStart"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="390dp">
+
+            <HorizontalScrollView
+                android:id="@+id/title_horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_margin="1dp"
+                android:fillViewport="false"
+                android:scrollbarSize="2dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <GridView
+                        android:id="@+id/truckList"
+                        android:layout_width="389dp"
+                        android:layout_height="150dp"
+                        android:isScrollContainer="true" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="560dp"
+            android:text="집요정을 구합니다"
+            android:textAlignment="textStart"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="590dp">
+
+            <HorizontalScrollView
+                android:id="@+id/title_horizontalScrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_margin="1dp"
+                android:fillViewport="false"
+                android:scrollbarSize="2dp"
+                android:scrollbars="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <GridView
+                        android:id="@+id/truckList2"
+                        android:layout_width="389dp"
+                        android:layout_height="150dp"
+                        android:isScrollContainer="true" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

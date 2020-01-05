@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".starDobbyActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <RelativeLayout
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:fillViewport="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="405dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:background="@drawable/gradientbackground"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="160dp"
+                        android:layout_height="165dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="120dp"
+                        android:id="@+id/profilepic"
+                        android:layout_marginBottom="53dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <ImageView
+                            android:id="@+id/socks1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="0dp"
+                            app:srcCompat="@drawable/socks1" />
+
+                        <ImageView
+                            android:id="@+id/socks2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp"
+                            app:srcCompat="@drawable/socks2" />
+
+                        <ImageView
+                            android:id="@+id/socks3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="3dp"
+                            app:srcCompat="@drawable/socks3" />
+
+                        <ImageView
+                            android:id="@+id/socks4"
+                            android:layout_width="155dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="0dp"
+                            app:srcCompat="@drawable/socks4" />
+
+                        <ImageView
+                            android:id="@+id/socks5"
+                            android:layout_width="155dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp"
+                            app:srcCompat="@drawable/socks5" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="152dp"
+                        android:text="하스도비98"
+                        android:textColor="#fff"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/profilepic"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="-25dp"
+                        android:layout_marginEnd="74dp"
+                        android:text="&quot;도비에게 양말을 주세요! 많이많이 주세요! &quot;"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="400dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="275dp"
+                    android:layout_marginEnd="5dp">
+
+                    <ImageView
+                        android:id="@+id/red1"
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/red" />
+
+                    <ImageView
+                        android:id="@+id/white1"
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/white" />
+
+                    <ImageView
+                        android:id="@+id/red2"
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="85dp"
+                        android:layout_marginBottom="0dp"
+                        app:srcCompat="@drawable/red" />
+
+                    <ImageView
+                        android:id="@+id/white2"
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="85dp"
+                        android:layout_marginBottom="0dp"
+                        app:srcCompat="@drawable/white" />
+
+                    <ImageView
+                        android:id="@+id/white3"
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="168dp"
+                        android:layout_marginBottom="0dp"
+                        app:srcCompat="@drawable/white" />
+
+                    <ImageView
+                        android:id="@+id/red3"
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="165dp"
+                        android:layout_marginBottom="0dp"
+                        app:srcCompat="@drawable/red" />
+
+                    <ImageView
+                        android:id="@+id/white4"
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="80dp"
+                        android:layout_marginBottom="0dp"
+                        app:srcCompat="@drawable/white" />
+
+                    <ImageView
+                        android:id="@+id/red4"
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="77dp"
+                        android:layout_marginBottom="0dp"
+                        app:srcCompat="@drawable/red" />
+
+                    <ImageView
+                        android:id="@+id/white5"
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="0dp"
+                        app:srcCompat="@drawable/white" />
+
+                    <ImageView
+                        android:id="@+id/red5"
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        app:srcCompat="@drawable/red" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/evaluation"
+        android:layout_width="332dp"
+        android:layout_height="130dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="387dp"
+        android:gravity="center"
+        android:hint="추가 평가 입력"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="261dp" />
+
+    <Button
+        android:id="@+id/evalend"
+        android:layout_width="393dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="55dp"
+        android:gravity="center"
+        android:text="평가완료" />
+</RelativeLayout>
