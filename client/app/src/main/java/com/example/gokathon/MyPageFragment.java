@@ -145,6 +145,15 @@ public class MyPageFragment extends Fragment {
             }
         });
 
+        LinearLayout toTime = (LinearLayout) v.findViewById(R.id.paycheck);
+        toTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homeIntent = new Intent(getActivity(), Time.class);
+                startActivity(homeIntent);
+            }
+        });
+
         // Inflate the layout for this fragment
         return v;
     }

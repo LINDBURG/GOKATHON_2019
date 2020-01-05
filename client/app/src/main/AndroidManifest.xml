@@ -56,6 +56,7 @@
         <activity android:name=".CostActivity2"/>
         <activity android:name=".CostActivity3"/>
         <activity android:name=".MyLocation"/>
+        <activity android:name=".Time"/>
     </application>
 
 </manifest>

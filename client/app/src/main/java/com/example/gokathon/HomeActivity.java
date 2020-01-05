@@ -100,7 +100,7 @@ public class HomeActivity extends AppCompatActivity implements HomeFragment.OnFr
 
                     Intent mainIntent = new Intent(HomeActivity.this, HouseActivity.class);
                     startActivity(mainIntent);
-                    finish();
+                    //finish();
 
                 }
             });
