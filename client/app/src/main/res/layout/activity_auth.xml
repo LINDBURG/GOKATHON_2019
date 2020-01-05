@@ -35,6 +35,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textSize="13sp"
+                android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:hint="이메일 입력" />
 
@@ -53,6 +54,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:gravity="center"
+                android:background="@drawable/authenticate"
                 android:text="인증번호 발송" />
         </LinearLayout>
     </LinearLayout>
